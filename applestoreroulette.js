@@ -197,7 +197,6 @@ var gotList = false;
 var socket = io.connect('http://home.lehnerstudios.com:6730/', {
 	maxReconnectionAttempts: 100
 });
-socket.connect();
 socket.on('connect', function () {
 	gotList = false;
 	accountsList.style.opacity = 0;

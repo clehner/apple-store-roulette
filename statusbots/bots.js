@@ -30,7 +30,7 @@ function contactStatusChanged(sn, status, suppressLog) {
 	
 	var delta = {};
 	delta[sn] = status;
-	io.sockets.broadcast.json(delta);
+	io.sockets.json.send(delta);
 	
 	if (!suppressLog) {
 		//log('Contact ' + sn + ' changed to ' + status + '.');
