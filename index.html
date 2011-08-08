@@ -1,0 +1,52 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Apple Store Roulette</title>
+	<link rel="stylesheet" type="text/css" href="styles.css">
+	<script src="socket.io/socket.io.min.js"></script>
+	<script src="transitions.js"></script>
+	<script src="stores.js"></script>
+	<script src="applestoreroulette.js"></script>
+	<meta property="og:title" content="Apple Store Roulette">
+	<meta property="og:type" content="activity"> 
+	<meta property="og:url" content="http://applestoreroulette.com/"> 
+	<meta property="og:image" content="http://applestoreroulette.com/icon.png"> 
+	<meta property="og:site_name" content="Apple Store Roulette"> 
+	<meta property="fb:admins" content="1361520039"> 
+	<meta property="og:description"
+	      content="Every Apple Store computer has an AIM account.
+	               See which ones are online, and chat with them.">
+	<script type="text/javascript">
+		var _gaq = _gaq || [];
+		_gaq.push(['_setAccount', 'UA-11963387-4']);
+		_gaq.push(['_trackPageview']);
+		
+		(function() {
+			var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+			ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+			var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+		})();
+	</script>
+</head>
+<body>
+	<div id="fixed">
+		<h1>Apple Store Roulette</h1>
+		<div class="desc">
+			<p id="subtitle">Chat with random people in Apple Stores.</p>
+			<p id="desc">Every computer in every Apple retail store has an iChat account.<br>
+			Apple Store Roulette shows you which accounts are online.<br>
+			Click one to start a chat with a random person in an Apple Store.</p>
+			<p><a href="http://www.lehnerstudios.com/stuff/applestorechat/">Old version of the site</a></p>
+			<!--<div id="fb-root"></div><script src="http://connect.facebook.net/en_US/all.js#xfbml=1"></script><fb:like href="http://applestoreroulette.com/" send="false" width="450" show_faces="false" font="lucida grande"></fb:like>-->
+			<p class="ios">
+				You'll need to use this site on a desktop computer to actually be able to chat with people.
+			</p>
+			<p id="coverage">
+				Coverage: <span id="coverage_amount">0</span>%
+			</p>
+		</div>
+	</div>
+	<div id="accounts"></div>
+</body>
+</html>

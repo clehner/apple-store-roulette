@@ -1,0 +1,182 @@
+@import url(http://fonts.googleapis.com/css?family=Brawler:regular&v1);
+
+body {
+	font: 14px "lucida grande", tahoma, verdana, arial, sans-serif;
+	background-color: #037450;
+	color: white;
+}
+
+#fixed {
+	position: fixed;
+	bottom: 0;
+	top: 0;
+}
+
+.desc {
+	margin: 2em;
+	margin-right: 35%;
+	line-height: 1.8em;
+}
+
+#subtitle {
+	font-size: 1.2em;
+	font-style: italic;
+	color: #ff0;
+	margin-left: 3em;
+}
+
+#desc {
+}
+
+/*
+#logo {
+	position: absolute;
+	bottom: 2em;
+}
+*/
+
+:link, :visited {
+	color: #3ef;
+}
+:link:active, :visited:active {
+	color: #f00;
+}
+
+h1 {
+	margin: 1ex;
+	margin-right: 300px;
+	overflow: auto;
+	font-family: 'Brawler', serif;
+	font-size: 50px;
+	color: #fc3;
+	/*
+	font-style: italic;
+	*/
+}
+
+#coverage {
+	position: absolute;
+	bottom: .5em;
+}
+
+/* Accounts list */
+
+#accounts {
+	padding: 0;
+	margin: 0;
+	padding-bottom: .5em;
+	color: #fff;
+	width: 27em;
+	position: absolute;
+	top: 0;
+	right: 0;
+}
+
+.store {
+	clear: both;
+	border-top: 1px solid #5C8A5C;
+	-webkit-transition: height 1s ease;
+}
+.store:first-child {
+	padding-top: 1em;
+}
+.store-info {
+	float: left;
+	width: 19em;
+	text-align: right;
+	font-size: .9em;
+	height: 1px;
+}
+.store-info h3 {
+	margin: .5em 0;
+	font-weight: normal;
+	font-size: 1.1em;
+}
+.subtitle {
+	color: #cc9;
+	opacity: .8;
+}
+
+.accounts {
+	float: left;
+}
+.account {
+	display: block;
+	padding-left: 4px;
+	border-radius: 14px;
+	overflow: hidden;
+	line-height: 1;
+	padding-top: 1px;
+}
+
+.account .buddyicon {
+	width: 48px;
+	height: 48px;
+	overflow: visible;
+	display: inline-block;
+	background-image: url(images/silhouette.png);
+}
+.account .buddyicon img {
+	width: 48px;
+	height: 48px;
+}
+.account .buddyicon:hover img {
+	min-width: 48px;
+	min-height: 48px;
+	width: auto;
+	height: auto;
+	position: absolute;
+}
+
+.account .indicator {
+	display: inline-block;
+	width: 12px;
+	height: 12px;
+	border-radius: 1em;
+	margin: 18px 8px;
+}
+.offline {
+	background-color: #fff;
+}
+.available {
+	background-color: #0f0;
+}
+.away {
+	background-color: #f63;
+}
+.idle {
+	background-color: #ff0;
+}
+.mobile {
+	background-color: #0ff;
+}
+
+.account:hover {
+	background-color: #99b673;
+}
+
+.account .chat-icon {
+	display: inline-block;
+	width: 24px;
+	height: 24px;
+	margin: 12px;
+}
+
+.protocol-ichat .account:hover .chat-icon {
+	background-image: url(images/ichat.png);
+}
+
+.protocol-aim .account:hover .chat-icon {
+	background-image: url(images/aim.png);
+}
+
+
+.ios {
+	display: none;
+}
+
+@media only screen and (max-device-width: 480px), only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (max-device-width: 1024px) {
+	.ios {
+		display: block;
+	}
+}
