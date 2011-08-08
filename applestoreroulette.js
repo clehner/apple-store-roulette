@@ -19,9 +19,19 @@ Node.prototype.prependChild = function (child) {
 	}
 };
 
-var accountsList;
+var accountsList = document.getElementById("accounts");
 var storesInfo = window.appleStoresInfo;
 var firstUpdate = true;
+
+var protocols = {
+	'aim': 'aim:goim?screenname=',
+	'ichat': 'ichat:compose?service=AIM&id='
+};
+var osx = navigator.userAgent.indexOf("Mac OS X") != -1;
+var protocol = osx ? 'ichat' : 'aim';
+accountsList.className += " protocol-" + protocol;
+
+var loadIcons = (location.search.indexOf("noicons") == -1);
 
 var stores = {};
 function getStore(storeId) {
@@ -103,15 +113,6 @@ Store.prototype = {
 		}, 10);
 	}
 };
-
-var protocols = {
-	'aim': 'aim:goim?screenname=',
-	'ichat': 'ichat:compose?service=AIM&id='
-};
-var osx = navigator.userAgent.indexOf("Mac OS X") != -1;
-var protocol = osx ? 'ichat' : 'aim';
-
-var loadIcons = (location.search.indexOf("noicons") == -1);
 
 function Account(sn) {
 	this.sn = sn;
@@ -240,8 +241,3 @@ socket.on('message', function(statusChanges) {
 		}
 	}
 });
-
-setTimeout(function () {
-	accountsList = document.getElementById("accounts");
-	accountsList.className += " protocol-" + protocol;
-}, 10);
