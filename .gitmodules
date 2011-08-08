@@ -1,0 +1,6 @@
+[submodule "oscar"]
+	path = statusbots/oscar
+	url = git://github.com/clehner/node-oscar.git
+[submodule "socket.io"]
+	path = statusbots/socket.io
+	url = git://github.com/LearnBoost/socket.io.git
