@@ -1,5 +1,5 @@
 var http = require('http');
-var io = require('./socket.io');
+var io = require('socket.io');
 var oscar = require('./oscar');
 
 var botLogins = require('./bot-logins').logins;
@@ -19,8 +19,8 @@ var statuses = {};
 var server = http.createServer();
 server.listen(6730);
 var io = io.listen(server);
-io.on('connection', function (client) {
-	client.send(statuses);
+io.sockets.on('connection', function (client) {
+	client.json.send(statuses);
 });
 
 function contactStatusChanged(sn, status, suppressLog) {
@@ -30,7 +30,7 @@ function contactStatusChanged(sn, status, suppressLog) {
 	
 	var delta = {};
 	delta[sn] = status;
-	io.broadcast(delta);
+	io.sockets.broadcast.json(delta);
 	
 	if (!suppressLog) {
 		//log('Contact ' + sn + ' changed to ' + status + '.');

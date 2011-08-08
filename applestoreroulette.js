@@ -194,8 +194,7 @@ function removeSN(sn) {
 var statuses = {};
 var gotList = false;
 
-var socket = new io.Socket('home.lehnerstudios.com', {
-	port: 6730,
+var socket = io.connect('http://home.lehnerstudios.com:6730/', {
 	maxReconnectionAttempts: 100
 });
 socket.connect();
